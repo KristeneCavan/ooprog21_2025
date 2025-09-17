@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class DebugThree1 {
     public static void main(String args[]) {
-        double check1, check2;
+        double check1;
+        double check2;
+
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter the amount of your check >> ");
@@ -14,12 +16,13 @@ public class DebugThree1 {
         calcTip(check1);
         calcTip(check2);
 
-        input.close();
+        input.close(); // Fixed error: Close Scanner to avoid resource leak
     }
 
     public static void calcTip(double bill) {
         final double RATE = 0.15;
-        double tip = bill * RATE;
+        double tip;
+        tip = bill * RATE;
         System.out.println("The tip should be at least $" + tip);
     }
 }
