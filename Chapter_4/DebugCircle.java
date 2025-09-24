@@ -19,4 +19,12 @@ public class DebugCircle {
     public double getArea() {
         return PI * radius * radius;
     }
+
+    public static void main(String[] args) {
+        DebugCircle circle = new DebugCircle(5); // create a DebugCircle with radius 5
+
+        System.out.println("Radius: " + circle.getRadius());
+        System.out.println("Diameter: " + circle.getDiameter());
+        System.out.println("Area: " + circle.getArea());
+    }
 }
